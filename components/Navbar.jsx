@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Text } from "lucide-react";
+import { Text } from "lucide-react";
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -44,13 +44,12 @@ const Nav = () => {
       {/* mobile navigation */}
 
       <div className="flex gap-4">
-        <Search className="mr-12 max-md:mr-1 hover:text-slate-50 ease-in duration-200 cursor-pointer" />
         <Text
           className="hidden max-md:flex mr-6"
           onClick={() => setToggleMenu((prev) => !prev)}
         />
         {toggleMenu && (
-          <ul className="hidden max-md:flex flex-col items-center justify-start text-left absolute top-20 gap-2 bg-gradient-to-r from-blue-500 to-purple-500 h-auto w-24 p-4 rounded-xl z-30">
+          <ul className="hidden max-md:flex flex-col items-center justify-start text-left absolute top-16 right-0 gap-2 bg-gradient-to-r from-blue-500 to-purple-500 h-auto w-24 p-4 rounded-xl z-30">
             <Link
               className="hover:text-slate-300 ease-in duration-200 "
               href="/"
